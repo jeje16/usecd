@@ -8,6 +8,7 @@ class App extends Component {
         <ol>
           <li>the Lord has done it</li>
           <li>the Lord has done it</li>
+          <li>krissy made a change</li>
         </ol>
         <Shopping/>    
         <Footer/> 

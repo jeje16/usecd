@@ -1,0 +1,94 @@
+To-do List
+------------
+1. check and fix errors in console
+2. delete extra code in app.js and index.css
+3. fix width issue
+4. dynamically create html for car lists using object
+5. word shop on gradient is cut off  
+6. separate components into their own files (yes you need to that file is so huge silly)
+
+Style Suggestions 
+------------------
+(read all and decide what you want to do before starting)
+
+1. magnifine glass search button styling 
+2. slight space before | between nav words at top right 
+3. add actual icon instead of c in nav
+4. support link li only has margin on one side making it different
+5. get rid of white space around full width image
+6. get rid of hr separating the sections use whitespace instead or style the hr (look it up there are many ways)
+7. get rid of one of the greybk10 (id recommend getting rid of second)
+8. choose only one car to keep so it doesn't get squished (id recommend the silver one)
+9. get rid of white space and lord has done it (or relocate it)
+10. make car list centered
+11. change 50% off radius to be further from the 5 
+12. remove border around pagination 
+13. make top/bottom padding of footer even
+14. get rid of stuff under footer
+15. personally dont like two nav areas 
+16. get rid of search (just add an actual car search by shop) 
+
+Other Suggestions
+-------------------
+1. Dynamic search by model etc or by clicking on models like gilroytoyota.components
+    (I can help you :) )
+2. Make website responsive with screen sizes
+    (this will take a lot of work but is pretty important)
+
+
+Todo Details
+==============================
+
+Details for Item 3
+------------------
+check items that are full width 
+100vw is unnecessary use 100% instead
+
+change those 3 lines of code then you notice an improvement 
+but problem remains
+
+next to greybk there is a little white space to the right so that is 
+no longer causing problems
+
+inspect the full width elements to see where the problem is
+
+hint: margin is not counted in box-sizing: border-box so that will add space
+
+answer!!
+--the image that is full width has a margin fix this and problem solved :D
+
+Details for Item 4
+-------------------
+Create carStorage.js 
+
+//in this file:
+export default [
+    {
+        key: 1,
+        title: 'Ford Bestest',
+        price: 1000,
+        salePrice: 50,
+        image: 'googleimage.place'
+    },
+    {
+        key: 2,
+        title: 'Ford Worstest',
+        price: '$100',
+        salePrice: '$5',
+        image: './images/carImage.png'
+    }
+]
+
+//in app.js
+import randomName from './fileLocation/file.js'
+//in render where needed
+randomName.map(car => {
+    <Component key={car.key} title={car.title} etc. />
+})
+
+
+Details for Item 5
+-------------------
+check margins
+
+answer: margin-left is negative get rid of it 
